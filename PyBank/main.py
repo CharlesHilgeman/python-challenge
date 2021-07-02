@@ -1,19 +1,20 @@
 import os
 import csv
 
-csv_reader = csv.DictReader(open("Resources","budget_data.csv"))
+csvpath = os.path.join("02-Homework/python-challenge/PyBank/Resources/budget_data.csv")
+with open(csvpath) as csvfile:
+    csv_reader = csv.reader(csvfile, delimiter = ",")
 
-months = 0
-total_pl = 0
-avg_pl = 0
-great_inc = 0
-great_dec = 0
-alldat = 0
+    p_l = []
+    for row in csv_reader:
+        p_l.append(row[1])
+        
+    months = 0
+    for months in p_l:
+        months += 1
 
-for row in csv_reader:
-    months += 1
-    alldat += float(row["Profit/Losses"])
-    total_pl += alldat
+        
 
 
+    
 
