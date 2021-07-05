@@ -22,7 +22,6 @@ with open(csvpath) as csvfile:
     for net in p_l:
         total_am += int(net)
 
-    mon_change = 0
     for i in range(1,len(p_l)-1):
         change.append(int(p_l[i+1]) - int(p_l[i]))
         
