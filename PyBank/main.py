@@ -26,13 +26,26 @@ with open(csvpath) as csvfile:
     for i in range(1,len(p_l)-1):
         change.append(int(p_l[i+1]) - int(p_l[i]))
         
-    mon_change = sum(change)/months+1
+    mon_change = sum(change)/months
+
+    max_change = max(p_l)
+    min_change = min(p_l)
+    for greatinc in p_l:
+        if greatinc == max_change:
+            greatmon = row["dates"]
+    for greatdec in p_l:
+        if greatdec == min_change:
+            badmon = row["dates"]
+
+    
 
     print("Financial Analysis")
     print("-------------------")
     print("Total Months: " + str(months))
     print("Total: $" + str(total_am))
     print("Average Change: $" + str(mon_change))
+    print("Greatest Increase in Profits: " + str(greatmon) + str(max_change))
+    print("Greatest Decrease in Profits: " + str(badmon) + str(min_change))
 
 
     
