@@ -30,12 +30,11 @@ with open(csvpath) as csvfile:
 
     max_change = max(p_l)
     min_change = min(p_l)
-    for greatinc in p_l:
-        if greatinc == max_change:
-            greatmon = row["dates"]
-    for greatdec in p_l:
-        if greatdec == min_change:
-            badmon = row["dates"]
+    maxpos = p_l.index(max(p_l))
+    minpos = p_l.index(min(p_l))
+    maxmonth = dates[maxpos]
+    minmonth = dates[minpos]
+
 
     
 
@@ -44,8 +43,8 @@ with open(csvpath) as csvfile:
     print("Total Months: " + str(months))
     print("Total: $" + str(total_am))
     print("Average Change: $" + str(mon_change))
-    print("Greatest Increase in Profits: " + str(greatmon) + str(max_change))
-    print("Greatest Decrease in Profits: " + str(badmon) + str(min_change))
+    print("Greatest Increase in Profits: " + str(maxmonth) + " ($" + str(max_change) +")")
+    print("Greatest Decrease in Profits: " + str(minmonth) + " ($" + str(min_change) + ")")
 
 
     
