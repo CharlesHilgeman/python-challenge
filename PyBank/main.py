@@ -35,15 +35,25 @@ with open(csvpath) as csvfile:
     minmonth = dates[minpos]
 
 
-    
+outputpath = os.path.join("02-Homework/python-challenge/PyBank/analysis/analysis.txt")
+with open(outputpath, "w") as file:
+    filewriter = file.write("Financial Analysis\n")
+    filewriter = file.write("--------------------\n")
+    filewriter = file.write("Total Months: " + str(months)+ "\n")
+    filewriter = file.write("Total: $" + str(total_am)+ "\n")
+    filewriter = file.write("Average Change: $" + str(mon_change)+ "\n")
+    filewriter = file.write("Greatest Increase in Profits: " + str(maxmonth) + " ($" + str(max_change) +")\n")
+    filewriter = file.write("Greatest Decrease in Profits: " + str(minmonth) + " ($" + str(min_change) + ")\n")
 
-    print("Financial Analysis")
-    print("-------------------")
-    print("Total Months: " + str(months))
-    print("Total: $" + str(total_am))
-    print("Average Change: $" + str(mon_change))
-    print("Greatest Increase in Profits: " + str(maxmonth) + " ($" + str(max_change) +")")
-    print("Greatest Decrease in Profits: " + str(minmonth) + " ($" + str(min_change) + ")")
+
+
+#print("Financial Analysis")
+#print("-------------------")
+#print("Total Months: " + str(months))
+#print("Total: $" + str(total_am))
+#print("Average Change: $" + str(mon_change))
+#print("Greatest Increase in Profits: " + str(maxmonth) + " ($" + str(max_change) +")")
+#print("Greatest Decrease in Profits: " + str(minmonth) + " ($" + str(min_change) + ")")
 
 
     
