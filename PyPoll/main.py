@@ -45,12 +45,12 @@ with open(csvpath) as csvfile:
     otoolperc = (otoolvote/voters) *100
     formatotool = "{:.3f}".format(otoolperc)
 
-newdict = {"Khan": khanvote,
-        "Correy": correyvote,
-        "Li": livote,
-        "O'Tooley": otoolvote}
-
-print(newdict)      
+candies = ["Khan","Correy","Li","O'Tooley"]
+voties = [khanvote,correyvote,livote,otoolvote]
+max_vote = max(voties)
+maxpos = voties.index(max_vote)
+winner = candies[maxpos]
+        
 
 outputpath = os.path.join("02-Homework/python-challenge/PyPoll/analysis/analysis.txt")
 with open(outputpath, "w") as file:
@@ -63,7 +63,8 @@ with open(outputpath, "w") as file:
     filewriter = file.write("Li: " + str(formatli) + "% (" + str(livote) + ")"+"\n")
     filewriter = file.write("O'Tooley: " + str(formatotool) + "% (" + str(otoolvote)+ ")"+"\n")
     filewriter = file.write("--------------------\n")
-    filewriter = file.write("Winner: " + str())
+    filewriter = file.write("Winner: " + str(winner) +"\n")
+    filewriter = file.write("--------------------\n")
 
 
 print("Election Results")
@@ -75,5 +76,5 @@ print("Correy: " + str(formatcorrey) + "% (" + str(correyvote)+ ")" )
 print("Li: " + str(formatli) + "% (" + str(livote) + ")" )
 print("O'Tooley: " + str(formatotool) + "% (" + str(otoolvote)+ ")" )
 print("--------------------")
-print("Winner: " + str())
-
+print("Winner: " + str(winner))
+print("--------------------")
