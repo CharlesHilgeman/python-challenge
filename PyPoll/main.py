@@ -45,26 +45,26 @@ with open(csvpath) as csvfile:
     otoolperc = (otoolvote/voters) *100
     formatotool = "{:.3f}".format(otoolperc)
 
-        
+newdict = {"Khan": khanvote,
+        "Correy": correyvote,
+        "Li": livote,
+        "O'Tooley": otoolvote}
+
+print(newdict)      
 
 outputpath = os.path.join("02-Homework/python-challenge/PyPoll/analysis/analysis.txt")
 with open(outputpath, "w") as file:
-    filewriter = file.write("Election Results")
-    filewriter = file.write("--------------------")
-    filewriter = file.write("Total Votes: " + str(voters))
-    filewriter = file.write("--------------------")
-    filewriter = file.write("Khan: " + str(formatkhan) + "% (" + str(khanvote)+ ")" )
-    filewriter = file.write("Correy: " + str(formatcorrey) + "% (" + str(correyvote)+ ")" )
-    filewriter = file.write("Li: " + str(formatli) + "% (" + str(livote) + ")" )
-    filewriter = file.write("O'Tooley: " + str(formatotool) + "% (" + str(otoolvote)+ ")" )
+    filewriter = file.write("Election Results\n")
+    filewriter = file.write("--------------------\n")
+    filewriter = file.write("Total Votes: " + str(voters) +"\n")
+    filewriter = file.write("--------------------"+"\n")
+    filewriter = file.write("Khan: " + str(formatkhan) + "% (" + str(khanvote)+ ")"+"\n")
+    filewriter = file.write("Correy: " + str(formatcorrey) + "% (" + str(correyvote)+ ")"+"\n")
+    filewriter = file.write("Li: " + str(formatli) + "% (" + str(livote) + ")"+"\n")
+    filewriter = file.write("O'Tooley: " + str(formatotool) + "% (" + str(otoolvote)+ ")"+"\n")
+    filewriter = file.write("--------------------\n")
+    filewriter = file.write("Winner: " + str())
 
-#print("Election Results")
-#print("--------------------")
-#print("Total Votes: " + str(voters))
-#print("--------------------")
-#print("Khan: " + str(formatkhan) + "% (" + str(khanvote)+ ")" )
-#print("Correy: " + str(formatcorrey) + "% (" + str(correyvote)+ ")" )
-#print("Li: " + str(formatli) + "% (" + str(livote) + ")" )
-#print("O'Tooley: " + str(formatotool) + "% (" + str(otoolvote)+ ")" )
+
 
 
