@@ -1,6 +1,6 @@
 # python-challenge
 
-This project was a demo on how to conduct bigger data using python. I constructed these scripts to better analyze polling and budget data to come up with heplful statistics.
+This project was a demo on how to conduct bigger data using python. I constructed these scripts to better analyze polling and budget data to come up with helpful statistics.
 
 
 PyBank
