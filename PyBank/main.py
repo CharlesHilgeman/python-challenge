@@ -20,19 +20,20 @@ with open(csvpath) as csvfile:
 
     total_am = 0
     for net in p_l:
-        total_am += int(net)
+        total_am += float(net)
 
-    for i in range(1,len(p_l)-1):
+    for i in range(int(len(p_l)-1)):
         change.append(int(p_l[i+1]) - int(p_l[i]))
         
-    mon_change = sum(change)/months
-
-    max_change = max(p_l)
-    min_change = min(p_l)
-    maxpos = p_l.index(max(p_l))
-    minpos = p_l.index(min(p_l))
-    maxmonth = dates[maxpos]
-    minmonth = dates[minpos]
+    mon_change = float(sum(change)/months)
+    changeformat = "{:.2f}".format(mon_change)
+    
+max_change = max(change)
+min_change = min(change)
+maxpos = change.index(max(change))
+minpos = change.index(min(change))
+maxmonth = dates[maxpos+1]
+minmonth = dates[minpos+1]
 
 
 outputpath = os.path.join("02-Homework/python-challenge/PyBank/analysis/analysis.txt")
@@ -41,20 +42,18 @@ with open(outputpath, "w") as file:
     filewriter = file.write("--------------------\n")
     filewriter = file.write("Total Months: " + str(months)+ "\n")
     filewriter = file.write("Total: $" + str(total_am)+ "\n")
-    filewriter = file.write("Average Change: $" + str(mon_change)+ "\n")
+    filewriter = file.write("Average Change: $" + str(changeformat)+ "\n")
     filewriter = file.write("Greatest Increase in Profits: " + str(maxmonth) + " ($" + str(max_change) +")\n")
     filewriter = file.write("Greatest Decrease in Profits: " + str(minmonth) + " ($" + str(min_change) + ")\n")
 
 
-
-#print("Financial Analysis")
-#print("-------------------")
-#print("Total Months: " + str(months))
-#print("Total: $" + str(total_am))
-#print("Average Change: $" + str(mon_change))
-#print("Greatest Increase in Profits: " + str(maxmonth) + " ($" + str(max_change) +")")
-#print("Greatest Decrease in Profits: " + str(minmonth) + " ($" + str(min_change) + ")")
-
+print("Financial Analysis")
+print("-------------------")
+print("Total Months: " + str(months))
+print("Total: $" + str(total_am))
+print("Average Change: $" + str(changeformat))
+print("Greatest Increase in Profits: " + str(maxmonth) + " ($" + str(max_change) +")")
+print("Greatest Decrease in Profits: " + str(minmonth) + " ($" + str(min_change) + ")")
 
     
 
