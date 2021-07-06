@@ -4,6 +4,7 @@ This project was a demo on how to conduct bigger data using python. I constructe
 
 
 PyBank
+
 Iterating through this allowed me to get a better picture of how budgeting fared through the course of the sample data.
 I was able to open the file path as well as the file using "os" and "csv" functions and left the header for better usability.
 I created lists to be able to append the data into my code.
@@ -15,6 +16,7 @@ Finally, at the end I used the open and write to export my findings to a .txt fi
 
 
 PyPoll
+
 Iterating through this data enabled me to determmine election data of a sample poll.
 I was able to determine vote counts, vote percentages, total votes, and the winner.
 Similarly, I was able to open the file path as well as the file using "os" and "csv" functions and left the header for better usability. I created lists to be able to append the data into my code.
