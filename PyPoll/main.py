@@ -1,5 +1,6 @@
 import os
 import csv
+from typing import Text
 
 csvpath = os.path.join("02-Homework/python-challenge/PyPoll/Resources/election_data.csv")
 with open(csvpath) as csvfile:
@@ -46,13 +47,24 @@ with open(csvpath) as csvfile:
 
         
 
-print("Election Results")
-print("--------------------")
-print("Total Votes: " + str(voters))
-print("--------------------")
-print("Khan: " + str(formatkhan) + "% (" + str(khanvote)+ ")" )
-print("Correy: " + str(formatcorrey) + "% (" + str(correyvote)+ ")" )
-print("Li: " + str(formatli) + "% (" + str(livote) + ")" )
-print("O'Tooley: " + str(formatotool) + "% (" + str(otoolvote)+ ")" )
+outputpath = os.path.join("02-Homework/python-challenge/PyPoll/analysis/analysis.txt")
+with open(outputpath, "w") as file:
+    filewriter = file.write("Election Results")
+    filewriter = file.write("--------------------")
+    filewriter = file.write("Total Votes: " + str(voters))
+    filewriter = file.write("--------------------")
+    filewriter = file.write("Khan: " + str(formatkhan) + "% (" + str(khanvote)+ ")" )
+    filewriter = file.write("Correy: " + str(formatcorrey) + "% (" + str(correyvote)+ ")" )
+    filewriter = file.write("Li: " + str(formatli) + "% (" + str(livote) + ")" )
+    filewriter = file.write("O'Tooley: " + str(formatotool) + "% (" + str(otoolvote)+ ")" )
+
+#print("Election Results")
+#print("--------------------")
+#print("Total Votes: " + str(voters))
+#print("--------------------")
+#print("Khan: " + str(formatkhan) + "% (" + str(khanvote)+ ")" )
+#print("Correy: " + str(formatcorrey) + "% (" + str(correyvote)+ ")" )
+#print("Li: " + str(formatli) + "% (" + str(livote) + ")" )
+#print("O'Tooley: " + str(formatotool) + "% (" + str(otoolvote)+ ")" )
 
 
