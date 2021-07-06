@@ -66,5 +66,14 @@ with open(outputpath, "w") as file:
     filewriter = file.write("Winner: " + str())
 
 
-
+print("Election Results")
+print("--------------------")
+print("Total Votes: " + str(voters))
+print("--------------------")
+print("Khan: " + str(formatkhan) + "% (" + str(khanvote)+ ")" )
+print("Correy: " + str(formatcorrey) + "% (" + str(correyvote)+ ")" )
+print("Li: " + str(formatli) + "% (" + str(livote) + ")" )
+print("O'Tooley: " + str(formatotool) + "% (" + str(otoolvote)+ ")" )
+print("--------------------")
+print("Winner: " + str())
 
